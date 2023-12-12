@@ -1,11 +1,14 @@
 import React from "react";
 
-function Image_home(){
-	return(
-		<div>
-			<img src="../" alt=""/>
-		</div>
-	)
+function ImageHome(props){
+
+	const customStyle = {
+		color: "",
+	}
+
+	return(		
+			<img className={props.class} style={customStyle} src={props.ImgSrc} alt={props.alt}/>
+		)
 }
 
-export default Image_home;
+export default ImageHome;

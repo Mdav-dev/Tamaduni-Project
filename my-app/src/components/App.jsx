@@ -1,11 +1,9 @@
 import React from "react";
-// import DeleteIcon from '@mui/icons-material/Delete';
+import Home from "./Home_page";
 
 function App(){
 	return(
-		<div>
-			<h1> </h1>			
-		</div>
+		<Home />
 	)
 }
 
