@@ -62,13 +62,16 @@ Button{
 	transition: margin 0.9s ease;
 }
 .sidebar{
+	grid-column: span 1;
+	grid-row: span 2;
 	display: flex;
 	flex-direction: column;
-	padding-top: 30px;
+	padding: 50px;
 	list-style: none;
-	width: 200px; /* Set the initial width of the sidebar */
-	height: 100vh; /* Full height of the viewport */
-	background-color: rgba(255, 242, 250, 0.712);
+	width: 350px; /* Set the initial width of the sidebar */
+	height: 100vh;
+	/* background-color: rgba(255, 242, 250, 0.349); */
+	background: linear-gradient(to bottom, rgba(255, 242, 250, 0.349), rgba(255, 242, 250, 0) );
 	color: #fff;
 	overflow: hidden;
 	transition: width 0.9s ease;
@@ -89,12 +92,19 @@ Button{
 	visibility: hidden;
 }
 .sb_visible{
-	width: 200px;
+	width: 350px;
 	margin-left: 0;
 	visibility: visible;
 }
 .Central_page{
-	background: url(/my-app/public/Images/Editted/pexels-kamal-ig-15842115.jpg);
+	grid-column: span 3;
+	grid-row: span 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 70px;
+	font-size: 2rem;
 }
 .footer{
 	display: flex;
