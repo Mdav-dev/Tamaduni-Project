@@ -1,17 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 
-function pa(props){
+function P(props){
+	const [colorr, setColorr] = useState(false);
+
+
 	const customStyle = {
 		fontFamily: "'Roboto', sans-serif",
-		fontSize: "25px",
-		color: "#000"
+		fontSize: "16px",
+		color: colorr?"#BDB76B" : "#000",
+		cursor: colorr?"pointer": "default",
+		marginBottom: "10px",
+		fontWeight: "500",
+		
+	}
+	const customStyle1 = {
+		color: "",
+	}
+	function handleHover(){
+		setColorr(true);
+	}
+	function handleLeave(){
+		setColorr(false);
 	}
 	return(		
-		<p style={customStyle}>
+		<span style={customStyle}
+		onMouseOver = {handleHover}
+		onMouseLeave = {handleLeave}
+		>
 			<a href={props.link}>
 				{props.detail}
 			</a>
-		</p>
+		</span>
 	)
 }
-export default pa;
+export default P;

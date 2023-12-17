@@ -1,10 +1,15 @@
-body{
+body, html{
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
+	      
+	      
 	/* background: url(/my-app/public/Images/Editted/pexels-kamal-ig-15842115.jpg); */
-
-
 }
+* {
+	box-sizing: content-box; /* or box-sizing: border-box; */
+      }
+      
 
 .main_page{
 	margin: 0;
@@ -33,7 +38,7 @@ body{
 	gap: 20px;
 	justify-content: space-around;
 	align-items: center;
-	width: 100px;
+	width: 200px;
 }
 .btn{
 	padding: 60px;
@@ -109,11 +114,13 @@ Button{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 100px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
 	padding-right: 400px;
 	font-size: 2rem;
 	font-family: 'Courgette', cursive;
-	height: 55vh;
+	/* height: 55vh; */
 	background: url(/my-app/public/Images/Editted/pexels-gary-12339475.jpg);
 }
 .footer{

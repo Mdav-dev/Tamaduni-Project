@@ -1,7 +1,7 @@
 import React from "react";
 import ImageHome from "./Image_home";
 import List from "./List_comp";
-import pa from "./minor_components/pa";
+import P from "./minor_components/pa";
 
 function Footer(){
 
@@ -14,12 +14,12 @@ function Footer(){
 		background: "linear-gradient(to right, #642b73, #c6426e)",
 		WebkitBackgroundClip: "text",
 		color: "transparent",
-		dispay: "inline-block"
+		dispay: "inline-block",
+		
 	}
 
 	return(
-		<div className="footer">
-		<pa detail="home"/>			
+		<div className="footer">		
 			<div className="footer_sect">
 			<ImageHome 
 			class="logo"
@@ -37,33 +37,24 @@ function Footer(){
 			</div>
 			<div className="footer_sect">
 				<h3>Social</h3>
-				<pa detail="Instagram" />
-				<pa detail="Youtube" />
-				<pa detail="Twitter" />
-				<pa />
+				<P detail="Instagram" />
+				<P detail="Youtube" />
+				<P detail="Twitter" />
+				<P />
 				
-
-				{/* <ul style={{listStyle: "none",}}>
-					<List pageName="Instagram" />
-					<List  pageName="Youtube"/>
-					<List  pageName="Twitter" />
-				</ul> */}
 			</div>
 			<div className="footer_sect">
 				<h3>Menu</h3>
-				<ul style={{listStyle: "none",}}>
-					<List pageName="Afro-Celebration" />
-					<List pageName="Cultural Ethnography" />
-					<List pageName="Contact Us" />
-				</ul>
+				<P detail="Afro-Celebration"/>
+				<P detail="Culture Mapping"/>
+				<P detail="Contact Us"/>
 			</div>
 			<div className="footer_sect">
 				<h3>Legal</h3>
-				<ul style={{listStyle: "none",}}>
-					<List pageName="Terms & Conditions" />
-					<List pageName="Licence" />
-					<List pageName="Contact" />
-				</ul>
+				<P detail="Terms and Conditions" />
+				<P detail="Licence"/>
+				<P detail="Contact"/>
+
 			</div>
 		</div>
 	)

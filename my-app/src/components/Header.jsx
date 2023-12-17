@@ -1,6 +1,7 @@
 // import React from "react";
 import ImageHome from "./Image_home";
 import {  Heading, Button } from 'rebass'
+import CButton from "./minor_components/CButton";
 
 
 
@@ -25,6 +26,7 @@ function Header(props){
 		alignItems: "center"
 	}
 	const siteTitleNameStyling = {
+		fontFamily: "'Tangerine', cursive",
 		fontSize: "40px",
 		fontWeight: "bold",
 		background: "linear-gradient(to right, #642b73, #c6426e)",
@@ -58,12 +60,9 @@ function Header(props){
 				</div>
 				<div style={siteTitleNameStyling}><Heading className="header_title">TAMADUNI</Heading></div>
 				<div className="header_btns">
-					<Button className="login btn">Login</Button>
-					<Button className="signup btn">Sign Up</Button>
+					<CButton link="http://www.youtube.com" name="Login" />
+					<CButton name="Sign Up" />
 				</div>
-			</div>
-			<div>
-				
 			</div>
 		</div>
 	)

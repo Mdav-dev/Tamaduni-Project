@@ -31,7 +31,7 @@ function Home(props){
 	return(
 		<div className="main_page">			
 			<Header buttonClick = {handleOnclick} />
-			<Sidebar isinvisible = {sidebar} />
+			{/* <Sidebar isinvisible = {sidebar} /> */}
 			<Central />
 			<FirstExcerpt />
 			<Footer />			
