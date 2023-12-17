@@ -24,7 +24,7 @@ function Header(props){
 		justifyContent: "center",
 		alignItems: "center"
 	}
-	const customhead = {
+	const siteTitleNameStyling = {
 		fontSize: "40px",
 		fontWeight: "bold",
 		background: "linear-gradient(to right, #642b73, #c6426e)",
@@ -56,7 +56,7 @@ function Header(props){
 					{/* <span onClick={handleClick}
 					class="material-icons-outlined menu_bar">Menu</span> */}
 				</div>
-				<div style={customhead}><Heading className="header_title">TAMADUNI</Heading></div>
+				<div style={siteTitleNameStyling}><Heading className="header_title">TAMADUNI</Heading></div>
 				<div className="header_btns">
 					<Button className="login btn">Login</Button>
 					<Button className="signup btn">Sign Up</Button>

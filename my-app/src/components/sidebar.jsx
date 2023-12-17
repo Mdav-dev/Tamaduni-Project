@@ -4,7 +4,7 @@ import List from "./List_comp";
 function Sidebar(props){
 
 	return(
-		<div className= {props.isinvisible?"sb_hidden sb_container":"sb_visible sb_container"}>
+		<div className= {props.isinvisible?"sb_container":"sb_visible sb_container"}>
 			<ul className="sidebar">
 			<List 
 				link="#"

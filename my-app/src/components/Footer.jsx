@@ -1,6 +1,7 @@
 import React from "react";
 import ImageHome from "./Image_home";
 import List from "./List_comp";
+import pa from "./minor_components/pa";
 
 function Footer(){
 
@@ -17,7 +18,8 @@ function Footer(){
 	}
 
 	return(
-		<div className="footer">			
+		<div className="footer">
+		<pa detail="home"/>			
 			<div className="footer_sect">
 			<ImageHome 
 			class="logo"
@@ -35,11 +37,17 @@ function Footer(){
 			</div>
 			<div className="footer_sect">
 				<h3>Social</h3>
-				<ul style={{listStyle: "none",}}>
+				<pa detail="Instagram" />
+				<pa detail="Youtube" />
+				<pa detail="Twitter" />
+				<pa />
+				
+
+				{/* <ul style={{listStyle: "none",}}>
 					<List pageName="Instagram" />
 					<List  pageName="Youtube"/>
 					<List  pageName="Twitter" />
-				</ul>
+				</ul> */}
 			</div>
 			<div className="footer_sect">
 				<h3>Menu</h3>
