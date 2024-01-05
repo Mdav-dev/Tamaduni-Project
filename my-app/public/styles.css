@@ -62,67 +62,6 @@ Button{
 
 
 }
-.sb_container{
-	display: flex;
-	transition: margin 0.9s ease;
-}
-.sidebar{
-	/* grid-column: span 1;
-	grid-row: span 2; */
-	display: flex;
-	flex-direction: column;
-	position: fixed;
-	/* top: 0; */
-	left: -350px;
-	padding: 0;
-	list-style: none;
-	width: 350px; /* Set the initial width of the sidebar */
-	height: 100vh;
-	/* background-color: rgba(255, 242, 250, 0.349); */
-	background: linear-gradient(to bottom, rgba(255, 242, 250, 0.349), rgba(255, 242, 250, 0) );
-	color: #fff;
-	overflow: hidden;
-	box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-	transition: left 0.9s ease-in-out;
-	}
-.sidebar a{
-	text-decoration: none;
-	font-weight: 700;
-	font-size: 1.4rem;
-	
-}
-/* .mine{
-	border: 1px;
-	border-color: black;
-	ma
-} */
-/* .sb_hidden{
-	left: -350px;
-	/* width: 0; */
-	/* visibility: hidden; 
-} */
-.sb_visible{
-	left: 0;
-	/* width: 350px; */
-	/* margin-left: 0; */
-	/* visibility: visible; */
-}
-.Central_page{
-	/* grid-column: span 3;
-	grid-row: span 2; */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	padding-right: 400px;
-	font-size: 2rem;
-	font-family: 'Courgette', cursive;
-	/* height: 55vh; */
-	background: url(/my-app/public/Images/Editted/pexels-gary-12339475.jpg);
-}
 .footer{
 	display: flex;
 	justify-content: space-around;

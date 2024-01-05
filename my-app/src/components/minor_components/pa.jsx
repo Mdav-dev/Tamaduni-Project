@@ -10,11 +10,7 @@ function P(props){
 		color: colorr?"#BDB76B" : "#000",
 		cursor: colorr?"pointer": "default",
 		marginBottom: "10px",
-		fontWeight: "500",
-		
-	}
-	const customStyle1 = {
-		color: "",
+		fontWeight: "800",		
 	}
 	function handleHover(){
 		setColorr(true);

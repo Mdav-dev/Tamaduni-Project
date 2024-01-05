@@ -12,26 +12,10 @@ function Home(props){
 		setSidebar(!sidebar)
 	}
 
-	// const customStyle1 = {
-	// 	display: "grid",
-	// 	gridTemplateColumns: "1fr 1fr 1fr 1fr",
-	// 	gridTemplateRows: "50vh 50vh",
-
-	// }
-	// const customStyle2 = {
-	// 	gridColumn: "span 1",
-  	// 	gridRow: "span 2",
-	// }
-	// const customStyle3 = {
-	// 	gridColumn: "span 3",
-  	// 	gridRow: "span 2",
-
-	// }
-
 	return(
 		<div className="main_page">			
 			<Header buttonClick = {handleOnclick} />
-			{/* <Sidebar isinvisible = {sidebar} /> */}
+			<Sidebar isinvisible = {sidebar} />
 			<Central />
 			<FirstExcerpt />
 			<Footer />			
