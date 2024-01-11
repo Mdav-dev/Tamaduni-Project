@@ -6,7 +6,7 @@ import Central from "./Central_page";
 import FirstExcerpt from "./FirstExcerpt";
 
 function Home(props){
-	const [sidebar, setSidebar] = useState(true);
+	const [sidebar, setSidebar] = useState(false);
 
 	function handleOnclick(){
 		setSidebar(!sidebar)
