@@ -1,6 +1,6 @@
-import React from "react";
-import List from "./List_comp";
+import React from "react"
 import {FaBars, FaTimes} from "react-icons/fa"
+
 
 function Sidebar(props){
 	<header>
@@ -14,6 +14,9 @@ function Sidebar(props){
 				<FaTimes/>
 			</button>
 		</nav>
+		<button>
+			<FaBars/>
+		</button>
 	</header>
 }
 export default Sidebar;

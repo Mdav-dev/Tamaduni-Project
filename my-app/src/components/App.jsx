@@ -1,9 +1,12 @@
 import React from "react";
 import Home from "./Home_page";
+import Sidebar from "./sidebar";
 
 function App(){
-	return(
+	return(<div>
+		<Sidebar/>
 		<Home />
+		</div>
 	)
 }
 
