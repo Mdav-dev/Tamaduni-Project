@@ -2,6 +2,7 @@
 import ImageHome from "./Image_home";
 import {  Heading, Button } from 'rebass'
 import CButton from "./minor_components/CButton";
+import {FaBars, FaTimes} from "react-icons/fa"
 
 
 
@@ -48,20 +49,16 @@ function Header(props){
 					ImgSrc="/Images/tamaduni_logo.png" 
 					alt="Logo Image"
 					/>
-					<span onClick={handleClick}>
-						<ImageHome 
-						class="menu_bar"
-						ImgSrc="/Images/menu_black_24dp.svg" 
-						alt="Logo Image"
-						/>
+					<span onClick={handleClick} className = "menu_bars">
+						<FaBars/>
 					</span>
 					{/* <span onClick={handleClick}
 					class="material-icons-outlined menu_bar">Menu</span> */}
 				</div>
-				<div style={siteTitleNameStyling}><Heading className="header_title">TAMADUNI</Heading></div>
+				<div style={siteTitleNameStyling}><Heading className="header_title">{props.title}</Heading></div>
 				<div className="header_btns">
-					<CButton link="http://www.youtube.com" name="Login" />
-					<CButton name="Sign Up" />
+					<CButton link="/login" name="Login" />
+					<CButton link="/sign_up" name="Sign Up" />
 				</div>
 			</div>
 		</div>

@@ -14,7 +14,9 @@ function Home(props){
 
 	return(
 		<div className="main_page">			
-			<Header buttonClick = {handleOnclick} />
+			<Header buttonClick = {handleOnclick} 
+				title = "TAMADUNI"
+			/>
 			<Central />
 			<FirstExcerpt />
 			<Footer />			
