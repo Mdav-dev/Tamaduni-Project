@@ -5,6 +5,8 @@ import { GrDocumentText } from "react-icons/gr";
 import { MdPrint } from "react-icons/md";
 import {FaTimes} from "react-icons/fa";
 import { TbWorldStar } from "react-icons/tb";
+import Particulars_Card from "./Particulars_Card";
+import Afro_card from "../AfroCelebration/Afro_card";
 
 function Particulars(props){
 	const container = {
@@ -64,6 +66,8 @@ function Particulars(props){
 				</div>
 			</div>
 			<div style={details}>
+			{/* <Particulars_Card /> */}
+			<Afro_card />
 
 			</div>
 		</div>

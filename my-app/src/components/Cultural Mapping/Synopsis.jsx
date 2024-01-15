@@ -8,20 +8,33 @@ function Synopsis(props){
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
-		alignItems: "center"
+		alignItems: "center",
+		height: "40vh",
 	}
+	const a = {
+		margin: "3px"
+	}
+	
+	const b = {
+		display: "flex",
+		alignItems: "flex-end",	
+	}
+	const c = {
+		width: "30px", 
+		height: "30px", 
+		margin: "5px"
+	}
+	const d = {
+		textDecoration: "underline"
+	}
+	const e ={margin: "5px"}
 
 	return(
 		<div style={synopsis}>
-			<h3 style={{margin: "3px"}}>SYNOPSIS</h3>
-			<div
-				style={{display: "flex",
-				alignItems: "flex-end"
-				
-				}}
-			>
-				<BsBank style={{width: "30px", height: "30px", margin: "5px"}}/>
-				<span style={{textDecoration: "underline"}}><h4 style={{margin: "5px"}}>{props.synopsis_heading}</h4></span>
+			<h3 style={a}>SYNOPSIS</h3>
+			<div style={b}>
+				<BsBank style={c}/>
+				<span style={d}><h4 style={e}>{props.synopsis_heading}</h4></span>
 			</div>
 			<div>
 				<p style={{margin: "10px", fontWeight:"bold", }}>{props.content}</p>

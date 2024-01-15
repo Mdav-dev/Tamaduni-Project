@@ -1,11 +1,13 @@
 import ImageHome from "../Image_home";
 import Nav_link from "./nav-link";
+import Afro_card from "../AfroCelebration/Afro_card";
 import Map from "./Map";
 import {FaBars} from "react-icons/fa";
 import Synopsis from "./Synopsis";
 import { MdSearch } from "react-icons/md";
 import Footer from "../Footer";
 import Particulars from "./Particulars";
+import Stats from "./Stats";
 function Cultural_mapping(props){
 	const container = {
 		display: "flex",
@@ -39,6 +41,7 @@ function Cultural_mapping(props){
 		border: "1px solid #000",
 		marginLeft: "5px",
 		marginRight: "5px",
+		height: "30vh",
 
 	}
 	
@@ -50,10 +53,11 @@ function Cultural_mapping(props){
 	const search_bar = {
 		display: "flex",
 		justifyContent: "center",
-
-
+		height: "10vh",
 	}
+
 	var check = false;
+
 	const det = "Institution that collects,	preserves, displays, and interprets objects,"+
 	 " artifacts, or specimens of"+
 	" cultural, historical,"+
@@ -90,8 +94,7 @@ function Cultural_mapping(props){
 			</div>
 			<div style={sub_container}>
 				<div style={synopsis_container}>
-					<div style={search_bar}>
-					
+					<div style={search_bar}>					
 						<input
 							style={{
 								border: "2px solid #000", 
@@ -123,9 +126,12 @@ function Cultural_mapping(props){
 					</div>
 					<Synopsis synopsis_heading= "Museum"
 						content= {det}
-					/>			
+					/>
+					<Stats docs="100" />
+
 				</div>
 				<div style={display_content}>
+					
 				{check?(<Map />):(
 					<Particulars 
 						heading="Museum"
