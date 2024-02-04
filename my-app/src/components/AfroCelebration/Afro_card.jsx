@@ -19,6 +19,7 @@ function Afro_card(props){
 		display: "flex",
 		justifyContent: "space-evenly",
 		alignItems: "center",
+		fontStyle: "none",
 		
 	}
 	const b = {
@@ -53,10 +54,6 @@ function Afro_card(props){
 		...aa,
 
 	}
-	
-	const ca = {
-		...ab
-	}
 	const d = {
 		gridColumn: "4/6",
 		gridRow: "2/5",
@@ -87,7 +84,7 @@ function Afro_card(props){
 				<RiVideoAddLine style={icon} />			
 			</div>
 			<div style={c}>
-				<img src="/Images/Editted/87.jpg" style={ca}/>
+				<img src="/Images/Editted/87.jpg" style={ab}/>
 			</div>
 			<div style={d}>
 				<div>Location</div>

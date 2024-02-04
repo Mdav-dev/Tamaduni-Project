@@ -67,72 +67,148 @@ function Sign_up(){
 		return emailRegex.test(email);
 	      };
 	      const container = {
-		display: "flex",
-		justifyContent: "center",
-		alignItems: "center"
+			display: "grid",
+			gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
+			gridTemplateRows: "1fr 1fr 1fr 1fr",
+			justifyContent: "center",
+			alignItems: "center",
+			height: "100vh"
 	      }
 	      const sub_container = {
-		// display: "flex",
-		flexDirection: "column"
+			gridColumn: "4/7",
+			gridRow: "1/6",
+			display: "flex",
+			flexDirection: "column",
+			justifyContent: "center",
+			alignItems:"center",		
 	      }
-	      return( <div>
-	      	
-		<div style={container}>
-		  	<div style={sub_container}>
-			  <h1>Sign Up</h1>
-		  
-		  {isFormSubmitted && <p>Form submitted successfully!</p>}
-		  <form onSubmit={handleSubmit}>
-		    <div>
-		      <label>Username:</label>
-		      <input
-			type="text"
-			name="username"
-			value={formData.username}
-			onChange={handleChange}
-		      />
-		      {formErrors.username && <p>{formErrors.username}</p>}
-		    </div>
-		    <div>
-		      <label>Email:</label>
-		      <input
-			type="email"
-			name="email"
-			value={formData.email}
-			onChange={handleChange}
-		      />
-		      {formErrors.email && <p>{formErrors.email}</p>}
-		    </div>
-		    <div>
-		      <label>Password:</label>
-		      <input
-			type="password"
-			name="password"
-			value={formData.password}
-			onChange={handleChange}
-		      />
-		      {formErrors.password && <p>{formErrors.password}</p>}
-		    </div>
-		    <div>
-		      <label>Confirm Password:</label>
-		      <input
-			type="password"
-			name="confirmPassword"
-			value={formData.confirmPassword}
-			onChange={handleChange}
-		      />
-		      {formErrors.confirmPassword && <p>{formErrors.confirmPassword}</p>}
-		    </div>
-		    <button type="submit">Sign Up</button>
-		  </form>
-		  <span style={{marginRight: "10px"}}>
-			Or Sign Up with 
-		  </span>
-		  <button style={{background: "white"}}><FcGoogle/></button>
-		  <button style={{background: "white"}}><AiFillFacebook/></button>
-		  <p>Already have an account? <a href="/login">Log in</a></p>
+
+
+		 const aa = {
+			position: "relative",
+			width: "100%",
+			paddingBottom: "75%",
+			// overflow: "hidden",	
+		}
+		 const image_container = {
+			...aa,
+			gridColumn: "1/4",
+			gridRow: "1/6",			
+		 }
+		 const ab = {
+			position: "absolute",
+			top: "0",
+			left: "0",
+			width: "100%",
+			height: "100%",
+			objectFit: "cover",
+		}
+
+
+		const inputBox = {
+			width: '100%',
+			padding: '10px',
+			marginBottom: '10px',
+			border: '1px solid #ccc',
+			borderRadius: '5px',
+			boxSizing: 'border-box',
+			display: 'block',
+		   }
+		   const submitButton = {
+			width: '100%',
+			padding: '10px',
+			backgroundColor: '#007bff',
+			color: '#fff',
+			border: 'none',
+			borderRadius: '5px',
+			cursor: 'pointer',
+		   }
+		   const dc = {
+			fontFamily:"\"Courgette\", cursive",
+			fontWeight:"400",
+			fontStyle:"normal",
+		   }
+		   const googleButton = {
+			...inputBox,
+			background: "white",
+			width: "40%"
+		  }
+		
+		
+
+
+		
+	     
+		
+		return(<div>	      	
+			<div style={container}>
+				<div style={image_container}>
+					<img src="/Images/Editted/87.jpg" style={ab}/>
+				</div>
+				<div style={sub_container}>
+					<h1>Sign Up</h1>
+			
+					{isFormSubmitted && <p>Form submitted successfully!</p>}
+					<form onSubmit={handleSubmit}>
+						<div>
+							{/* <label>Username:</label> */}
+							<input
+							placeholder="Username"
+							type="text"
+							name="username"
+							style={inputBox}
+							value={formData.username}
+							onChange={handleChange}
+							/>
+							{formErrors.username && <p>{formErrors.username}</p>}
+						</div>
+						<div>
+							{/* <label>Email:</label> */}
+							<input
+							placeholder="Email"
+							type="email"
+							name="email"
+							style={inputBox}
+							value={formData.email}
+							onChange={handleChange}
+							/>
+							{formErrors.email && <p>{formErrors.email}</p>}
+						</div>
+						<div>
+							{/* <label>Password:</label> */}
+							<input
+							placeholder="Password"
+							type="password"
+							name="password"
+							value={formData.password}
+							style={inputBox}
+							onChange={handleChange}
+							/>
+							{formErrors.password && <p>{formErrors.password}</p>}
+						</div>
+						<div>
+							{/* <label>Confirm Password:</label> */}
+							<input
+							placeholder="Confirm Password"
+							type="password"
+							name="confirmPassword"
+							style={inputBox}
+							value={formData.confirmPassword}
+							onChange={handleChange}
+							/>
+							{formErrors.confirmPassword && <p>{formErrors.confirmPassword}</p>}
+						</div>
+						<button style={submitButton} type="submit">Sign Up</button>
+					</form>
+					<span style={{marginRight: "10px", ...dc}}>
+						Or Sign Up with 
+					</span>
+					<button  style={googleButton}><FcGoogle/>Sign up with Google</button>
+					<button style={googleButton}><AiFillFacebook/>Sign up with Facebook</button>
+					<p>Already have an account? <a style={{textStyle: "none", fontWeight: "bold"}} href="/login">Log in</a></p>
+				</div>
+
 			</div>
-		</div>
 	</div>
 	      )
 	      

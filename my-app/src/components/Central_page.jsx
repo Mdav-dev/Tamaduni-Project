@@ -24,13 +24,61 @@ function Central(){
 		display: "flex",
 		gap: "50px",
 		padding: "20px",
+		
 	 };
 	const  customStyle5 = {
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
-		alignItems: "center"
+		alignItems: "center",
+		flex: "1",
 	}
+	const imageStyle = {
+		flex: "1"
+	}
+	const imageStyling = {
+		container:{
+			position: "relative",
+			width: "100%",
+			paddingBottom: "75%",
+			overflow: "hidden",
+
+			// Other styles go below
+			flex: "1",
+		},
+		image:{
+			position: "absolute",
+			top: "0",
+			left: "0",
+			width: "100%",
+			height: "100%",
+			objectFit: "cover",
+		},
+	}
+	const aa = {
+		position: "relative",
+		width: "100%",
+		paddingBottom: "75%",
+		overflow: "hidden",
+
+	}
+
+	 const image_container = {
+		...aa,
+		flex: "1",			
+		
+	 }
+
+	 const ab = {
+		position: "absolute",
+		top: "0",
+		left: "0",
+		width: "100%",
+		height: "100%",
+		objectFit: "cover",
+	}
+
+
 	const Central_page = {
 
 	}
@@ -41,20 +89,23 @@ function Central(){
 		 <span style={customStyle}>creativity</span>, and  <span style={customStyle}>unity</span>.</h2>
 
 		<div style = {customStyle4}>
-		<div style = {customStyle5}>
-		<h1>Cultural Mapping</h1>
-		 <p>In Cultural Mapping we are going to study different cultures in 
-		 relation to their location and their similaries to unite them and one people</p>
-		</div> 
-		<img src="Images/card_images/79.jpg" />		
+			<div style = {customStyle5}>
+				<h1>Cultural Mapping</h1>
+				<p>In Cultural Mapping we are going to study different cultures in 
+				relation to their location and their similaries to unite them and one people</p>
+			</div> 
+			
+				<img style={imageStyle} src="Images/card_images/79.jpg" />	
+			
+				
 		</div>
 
 		 <div style = {customStyle4}>		 
-		 <img src="Images/card_images/75.jpg" alt="image for cultural mapping" style={{}}/>
-		 <div style={customStyle5}>
-		 <h1>Cultural Mapping</h1>
-		 <p>In Cultural Mapping we are going to study different cultures in 
-		 relation to their location and their similaries to unite them and one people</p>
+			<img src="Images/card_images/75.jpg" alt="image for cultural mapping" style={{}}/>
+			<div style={customStyle5}>
+				<h1>Cultural Mapping</h1>
+				<p>In Cultural Mapping we are going to study different cultures in 
+				relation to their location and their similaries to unite them and one people</p>
 		 </div>
 		 	 
 		 </div>

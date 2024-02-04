@@ -1,6 +1,7 @@
 import ImageHome from "../Image_home";
-import Nav_link from "./nav-link";
+import Nav_link from "./nav_link";
 import Afro_card from "../AfroCelebration/Afro_card";
+import Nav_link_container from "./nav_link_container";
 import Map from "./Map";
 import {FaBars} from "react-icons/fa";
 import Synopsis from "./Synopsis";
@@ -8,6 +9,7 @@ import { MdSearch } from "react-icons/md";
 import Footer from "../Footer";
 import Particulars from "./Particulars";
 import Stats from "./Stats";
+import Flag_card_container from "../AfroCelebration/flag_card_container";
 function Cultural_mapping(props){
 	const container = {
 		display: "flex",
@@ -23,11 +25,7 @@ function Cultural_mapping(props){
 		justifyContent: "space-between"
 		
 	}
-	const particulars = {
-		display: "flex",
-		justifyContent: "center",
-		border: "1px solid #000",
-	}
+	
 	const sub_container = {
 		display: "flex",
 		justifyContent: "space-betwwen",
@@ -55,6 +53,15 @@ function Cultural_mapping(props){
 		justifyContent: "center",
 		height: "10vh",
 	}
+	const particulars = {
+		display: "flex",
+		justifyContent: "center",
+		border: "1px solid #000",
+		"width":"100%",
+		"overflowX":"auto",
+		"whiteSpace":"nowrap",
+
+	}
 
 	var check = false;
 
@@ -73,18 +80,16 @@ function Cultural_mapping(props){
 		<div style={container}>
 			<div style={heading}>
 				<div style={file_header}>
-				<ImageHome 
+				<a href="/#"><ImageHome 
 					class="logo"
 					ImgSrc="/Images/tamaduni_logo.png" 
 					alt="Logo Image"
-					/>
+					
+					/></a>
 					<h1>CULTURAL MAPPING</h1>
 					<FaBars/>
 				</div>
-				<div style={{...particulars, margin: "0", padding: "0"}}>
-					<Nav_link name="Heritage places"/>
-					<Nav_link name="Heritage places"/>
-				</div>
+				<Flag_card_container />
 				<div style={{...particulars}}> 
 					<Nav_link name ="Museum"/>
 					<Nav_link name ="Museum"/>

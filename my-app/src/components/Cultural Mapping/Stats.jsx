@@ -8,22 +8,23 @@ function Stats(props){
 	const container = {
 		display: "grid",
 		border: "1px solid #000",
-		height: "16vh",
+		height: "14vh",
 		margin: "5px",
 		gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
 		gridTemplateRows: "1fr 1fr",
+		padding: "5px",
 
 	}
 	const size = {
 		width: "35px",
-		height: "35px",
+		height: "30px",
 		padding: "0",
 		margin: "0"
 	}
 	const sub_container = {
 		display: "flex",
 		alignItems: "flex-end",
-		border: "1px solid #000"
+		// border: "1px solid #000"
 	}
 	const number = {
 		fontSize: "10px"
