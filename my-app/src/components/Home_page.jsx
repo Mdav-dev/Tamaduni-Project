@@ -16,8 +16,11 @@ function Home(props){
 		<div className="main_page">			
 			<Header buttonClick = {handleOnclick} 
 				title = "TAMADUNI"
+				
 			/>
 			<Central />
+			<Sidebar toggle = {sidebar}
+			ClickIt = {handleOnclick} />			
 			<FirstExcerpt />
 			<Footer />			
 		</div>

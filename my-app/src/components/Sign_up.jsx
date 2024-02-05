@@ -70,8 +70,6 @@ function Sign_up(){
 			display: "grid",
 			gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
 			gridTemplateRows: "1fr 1fr 1fr 1fr",
-			justifyContent: "center",
-			alignItems: "center",
 			height: "100vh"
 	      }
 	      const sub_container = {
@@ -143,7 +141,7 @@ function Sign_up(){
 		return(<div>	      	
 			<div style={container}>
 				<div style={image_container}>
-					<img src="/Images/Editted/87.jpg" style={ab}/>
+					<img src="/Images/card_images/87.jpg" style={ab}/>
 				</div>
 				<div style={sub_container}>
 					<h1>Sign Up</h1>

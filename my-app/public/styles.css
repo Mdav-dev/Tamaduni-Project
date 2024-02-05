@@ -17,12 +17,13 @@ body, html{
 	/* background: url(/my-app/public/Images/Editted/pexels-kamal-ig-15842115.jpg); */
 	background: linear-gradient(to bottom right, );
 	background: rgb(170,184,252);
-	background: radial-gradient(circle, rgba(170,184,252,0.6587009803921569) 0%, rgba(255,245,247,0.7511379551820728) 100%);
+	background: radial-gradient(circle, rgba(223, 189, 255, 0.659) 0%, rgba(255,245,247,0.7511379551820728) 100%);
 
 	
 }
 .header_file{
 	border-radius: 10%;
+	padding-bottom: 30px;
 }
 .header{
 	display: flex;

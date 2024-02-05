@@ -4,17 +4,18 @@ import { FcGoogle } from "react-icons/fc";
 
 function Login(props){
 	const container = {
-		display: "flex",
-		justifyContent: "center",
-		alignItems: "center",
+		display: "grid",
+		gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
+		gridTemplateRows: "1fr 1fr 1fr 1fr",
 		height: "100vh"
 	}
 	const login_container = {
+		gridColumn: "4/7",
+		gridRow: "1/6",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
 		alignItems: "center",
-		flex: "1",
 
 	}
 	const aa = {
@@ -26,7 +27,8 @@ function Login(props){
 	}
 	const image_container = {
 		...aa,
-		flex: "1",
+		gridColumn: "1/4",
+		gridRow: "1/6",
 	}
 	const ab = {
 		position: "absolute",

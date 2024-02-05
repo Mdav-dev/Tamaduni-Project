@@ -10,14 +10,15 @@ function App(){
 
 	return(
 		<Router>
-		<div>
-		<Routes>
-		<Route path="/" element={<Home/>} />	
-		<Route path="/login" element={<Login/>}/>
-		<Route path="/sign_up" element = {<Sign_up/>}/>
-		<Route path="/cultural_mapping" element = {<Cultural_mapping/>} />
-		</Routes>		
-		</div>
+			<div>
+				<Routes>
+					<Route path="/" element={<Home/>} />	
+					<Route path="/login" element={<Login/>}/>
+					<Route path="/sign_up" element = {<Sign_up/>}/>
+					<Route path="/cultural_mapping" element = {<Cultural_mapping/>} />
+					<Route path="/afro_celebration" element = {<Cultural_mapping/>} />					
+				</Routes>		
+			</div>
 		</Router>
 	)
 }
