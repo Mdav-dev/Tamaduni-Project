@@ -66,9 +66,9 @@ Button{
 .footer{
 	display: flex;
 	justify-content: space-around;
-	background: #4ac29a; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top, #4ac29a, #bdfff3); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top,  #bdfff3, #f8fffd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #deece7; /* fallback for old browsers */
+	/*background: -webkit-linear-gradient(to top, #4ac29a, #bdfff3); /* Chrome 10-25, Safari 5.1-6 */
+	/*background: linear-gradient(to top,  #bdfff3, #f8fffd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .footer_sect{
 	display: flex;

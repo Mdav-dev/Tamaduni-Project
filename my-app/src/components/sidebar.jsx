@@ -1,28 +1,51 @@
 import React, { useState } from "react"
+import NavLink from "./minor_components/navLink";
 import {FaBars, FaTimes} from "react-icons/fa"
 import { FcUndo } from "react-icons/fc";
 
 
 function Sidebar(props){
-	const [over, setOver] = useState(false)
-	const [out, SetOut] = useState(false)
+	const [over, setOver] = useState(false);
+
+	function HandleHover(){
+		setOver(true);
+	}
+	function HandleOut(){
+		setOver(false);
+	}
 	function Click()	{
 		props.ClickIt()
 	}
-	const tt = props.toggle;
 
-	function HandleHover(){
-		// setOver = true;
+	const tt = props.toggle;
+	var positionLeft = "";
+	var positionRight = "";
+	const placement = props.side;
+	if(placement=="left"){
+		if(tt){
+			positionLeft = "0";
+			positionRight = "";
+		}else{
+			positionLeft = "-100%";
+			positionRight = "0";
+		}
+
+	}else{
+		if(tt){
+			positionLeft = "";
+			positionRight = "0";
+		}else{
+			positionLeft = "";
+			positionRight = "-100%";
+		}	
 	}
-	function HandleOut(){
 		
-	}
-	
 
 	const nav_container = {
 		position: "fixed",
 		top: "0",
-		left: tt?"0":"-100%",
+		left: positionLeft,
+		right: positionRight,
 		width: "250px",
 		height: "100vh",
 		background: "rgba(253, 219, 255)",
@@ -31,6 +54,7 @@ function Sidebar(props){
 		color: "black",
 		alignItems: "center",
 		transition: "750ms",
+		zIndex: "999",
 
 	}
 	const logo = {
@@ -41,40 +65,34 @@ function Sidebar(props){
 		marginBottom: "0",
 	}
 	const times = {
-
+		background: over?"red":"",
+		height:"50px",
+		display: "flex",
+		justifyContent: "center",
+		alignItems: "center",
+		color:over?"white":"",
 	}
-	const navLinks = {
+	const navigationLinks = {
+		width: "100%",
+		display: "flex",
+		flexDirection: "Column"
 		
 	}
-	const list = {
-		a:{listStyleType: "none",
-			background: over?"#758398":"#75839800",
-			padding: "25px",
-			
-		},
 
-		b:{textDecoration: "none",
-			color: "#000",
-			fontSize: "1.2rem",
-			fontFamily:"\"Courgette\", cursive",
-			fontWeight:"400",
-			fontStyle:"normal",
-		
-		},
-	}
 
 	return(
 	<div style={nav_container}>
 		<img style={logo} src="Images/tamaduni_logo.png" alt="logo"/>
-		<div style={{}} onClick={Click}>
+		<div style={times} onMouseOver={HandleHover} onMouseOut={HandleOut} onClick={Click}>
 			<FaTimes style={icon}/>
 		</div>
-		<nav style={navLinks}>
-			<li onMouseOver={HandleHover} onMouseOut={HandleOut} style={list.a}><a style={list.b} href="/">Home</a></li>
-			<li onMouseOver={HandleHover} onMouseOut={HandleOut} style={list.a}><a style={list.b} href="/cultural_mapping">Cultural Mapping</a></li>
-			<li onMouseOver={HandleHover} onMouseOut={HandleOut} style={list.a}><a style={list.b} href="/afro_celebration">Afro Celebration</a></li>
-			<li onMouseOver={HandleHover} onMouseOut={HandleOut} style={list.a}><a style={list.b} href="/about">About Us</a></li>
-			<li onMouseOver={HandleHover} onMouseOut={HandleOut} style={list.a}><a style={list.b} href="/team">Our Team</a></li>
+		<nav style={navigationLinks}>
+			<NavLink link = "/" target="Home" />
+			<NavLink link = "/cultural_mapping" target="Cultural Mapping" />
+			<NavLink link = "/afro_celebration" target="Afro Celebration"/>
+			<NavLink link = "/about" target="About Us"/>
+			<NavLink link = "/team" target="Our Team"/>
+
 			
 		</nav>		
 	</div>

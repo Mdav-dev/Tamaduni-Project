@@ -1,20 +1,21 @@
 import ImageHome from "../Image_home";
-import Nav_link from "./nav_link";
+import Nav_link from "../Cultural Mapping/nav_link";
 import Afro_card from "../AfroCelebration/Afro_card";
-import Nav_link_container from "./nav_link_container";
-import Map from "./Map";
+import Nav_link_container from "../Cultural Mapping/nav_link_container";
+import Map from "../Cultural Mapping/Map";
 import {FaBars} from "react-icons/fa";
-import Synopsis from "./Synopsis";
+import Synopsis from "../Cultural Mapping/Synopsis";
 import { MdSearch } from "react-icons/md";
 import Footer from "../Footer";
-import Particulars from "./Particulars";
-import Stats from "./Stats";
-import Flag_card_container from "../AfroCelebration/flag_card_container";
-import Particulars_Card from "./Particulars_Card";
+import Particulars from "../Cultural Mapping/Particulars";
+import Stats from "../Cultural Mapping/Stats";
+import Flag_card_container from "./flag_card_container";
 import Sidebar from "../sidebar";
 import { useState } from "react";
 
-function Cultural_mapping(props){
+
+
+function Afro_Celebration(props){
 	const container = {
 		display: "flex",
 		flexDirection: "column"
@@ -92,18 +93,18 @@ function Cultural_mapping(props){
 			height: "30px"
 		}
 	}
+	const [sidebar, setSidebar] =useState(false);
+
+	function handleOnclick(){
+		setSidebar(!sidebar)
+	}
 	const title = {
 		"fontFamily":"cursive",
 		"fontWeight":"600",
 		"fontStyle":"normal"
 	}
 
-	const [sidebar, setSidebar] =useState(false);
 
-	function handleOnclick(){
-		setSidebar(!sidebar)
-	}
-	
 
 
 
@@ -111,19 +112,18 @@ function Cultural_mapping(props){
 		<div style={container}>
 			<div style={heading}>
 				<div style={file_header}>
-					<div>
-						<a href="/#"><ImageHome 
-							class="logo"
-							ImgSrc="/Images/tamaduni_logo.png" 
-							alt="Logo Image"						
-							/></a>
-					</div>
-					<div><h1 style={title}>CULTURAL MAPPING</h1></div>
-					<div onClick={handleOnclick} style={menu_bars.a}><FaBars style={menu_bars.b}/></div>
+					<div><a href="/#"><ImageHome 
+					class="logo"
+					ImgSrc="/Images/tamaduni_logo.png" 
+					alt="Logo Image"					
+					/></a></div>
+					<div><h1 style={title}>AFRO CELEBRATION</h1></div>
+					<div onClick={handleOnclick} style={menu_bars.a}><FaBars style={menu_bars.b}/></div>					
 				</div>
 				<Sidebar toggle = {sidebar}
 				ClickIt = {handleOnclick}
 				side = "right" />
+					<Flag_card_container />
 				<div style={{...particulars}}> 
 					<Nav_link name ="Museum"/>
 					<Nav_link name ="Museum"/>
@@ -170,15 +170,13 @@ function Cultural_mapping(props){
 
 				</div>
 				<div style={display_content}>
-
 					
 				{check?(<Map />):(
 					<Particulars 
 						heading="Museum"
 						category="Heritage places"
-						card= {Particulars_Card} 				
-
-						/>)}				 
+						card={Afro_card}
+					/>)}				 
 				</div>
 			</div>
 			<Footer />
@@ -187,4 +185,4 @@ function Cultural_mapping(props){
 	)
 
 }
-export default Cultural_mapping;
+export default Afro_Celebration;

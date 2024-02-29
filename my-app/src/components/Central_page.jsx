@@ -75,7 +75,7 @@ function Central(){
 		padding: "20px",
 		gridColumn: "1/7",
 		gridRow: "3/7",
-		background: "#000",
+		background:"grey",
 		color: "#fff",
 		"fontFamily":"\"Newsreader\", serif",
 		"fontOpticalSizing":"auto",
@@ -89,7 +89,7 @@ function Central(){
 		display: "flex",
 		gap: "50px",
 		padding: "20px",
-		background: "#000",
+		background: "grey",
 		color: "#fff",
 		"fontFamily":"\"Newsreader\", serif",
 		"fontOpticalSizing":"auto",
@@ -114,7 +114,7 @@ function Central(){
 	<div style={Central_page}>
 		<div style={landing}>			
 			<img style={ab} src="Images/Uneditted/75.jpg" alt="Maasai tribe photo"/>
-			<div style={{...ab, background: "rgba(13, 17, 24, 0.8)",}}></div>			
+			<div style={{...ab, background: "rgba(0, 0, 0, 0.6)",}}></div>			
 			<h2 style={customIntro}><span style={customStyle}>Africanacity</span> is the rhythm of resilience, the melody of diversity,
 			and the <span style={customStyle}>harmony of strength</span>. It's the celebration of a continent's spirit, 
 			echoing through time with the vibrant beats of <span style={customStyle}>innovation</span>, 

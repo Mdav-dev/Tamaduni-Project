@@ -85,7 +85,7 @@ function Sign_up(){
 		 const aa = {
 			position: "relative",
 			width: "100%",
-			paddingBottom: "75%",
+			paddingBottom: "7%",
 			// overflow: "hidden",	
 		}
 		 const image_container = {

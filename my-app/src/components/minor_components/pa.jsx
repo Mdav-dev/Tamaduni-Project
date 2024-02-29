@@ -12,6 +12,10 @@ function P(props){
 		marginBottom: "10px",
 		fontWeight: "800",		
 	}
+	const linkStyle = {
+		textDecoration: "none",
+		color: "black",
+	}
 	function handleHover(){
 		setColorr(true);
 	}
@@ -23,7 +27,7 @@ function P(props){
 		onMouseOver = {handleHover}
 		onMouseLeave = {handleLeave}
 		>
-			<a href={props.link}>
+			<a style={linkStyle} href={props.link}>
 				{props.detail}
 			</a>
 		</span>

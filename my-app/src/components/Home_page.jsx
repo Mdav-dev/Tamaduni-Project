@@ -20,7 +20,8 @@ function Home(props){
 			/>
 			<Central />
 			<Sidebar toggle = {sidebar}
-			ClickIt = {handleOnclick} />			
+			ClickIt = {handleOnclick}
+			side = "left" />			
 			<FirstExcerpt />
 			<Footer />			
 		</div>

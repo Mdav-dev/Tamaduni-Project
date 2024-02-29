@@ -7,6 +7,7 @@ import {FaTimes} from "react-icons/fa";
 import { TbWorldStar } from "react-icons/tb";
 import Particulars_Card from "./Particulars_Card";
 import Afro_card from "../AfroCelebration/Afro_card";
+import Scrollables from "./Scrollables";
 
 function Particulars(props){
 	const container = {
@@ -66,8 +67,10 @@ function Particulars(props){
 				</div>
 			</div>
 			<div style={details}>
+			{/* <props.card /> */}
 			{/* <Particulars_Card /> */}
-			<Afro_card />
+			{/* <Afro_card /> */}
+			<Scrollables />
 
 			</div>
 		</div>

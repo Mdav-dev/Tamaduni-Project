@@ -1,26 +1,33 @@
  
  function Flag_card(props){
 
-	const country_code = props.code;
+	const country_code = props.codes;
 	const country_name = props.country;
 	const a = "https://flagcdn.com/224x168/" + country_code + ".png"
 
 	const b={
-		height: "70px",
-		width: "120%",
-		marginRight: "90px"
+		height: "42px",
+		width: "70%",
+		marginRight: "30px",
+		marginLeft: "30px",
+		padding:"7px",
 	}
 	const c = {
 		padding: "0",
 		margin: "0",
+		"fontFamily":"\"Newsreader\", serif",
+		"fontOpticalSizing":"auto",
+		"fontWeight":"600",
+		"fontStyle":"normal",
+		fontSize: "0.9rem"
 	}
 	
 	return(
 		<div style={b}>
 			<img
 			src ={a}
-			width="57"
-			height="44"
+			width="35"
+			height="28"
 			style={c}
 			alt={country_name}/>
 

@@ -39,6 +39,13 @@ function Header(props){
 		props.buttonClick();
 	}
 
+	const menu_b ={
+		width: "50px",
+	}
+
+
+
+
 	
 	return(
 		<div className="header_file">
@@ -50,7 +57,7 @@ function Header(props){
 					alt="Logo Image"
 					/>
 					<span onClick={handleClick} className = "menu_bars">
-						<FaBars/>
+						<FaBars style={menu_b}/>
 					</span>
 					{/* <span onClick={handleClick}
 					class="material-icons-outlined menu_bar">Menu</span> */}
