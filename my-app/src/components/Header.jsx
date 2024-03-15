@@ -3,11 +3,23 @@ import ImageHome from "./Image_home";
 import {  Heading, Button } from 'rebass'
 import CButton from "./minor_components/CButton";
 import {FaBars, FaTimes} from "react-icons/fa"
+import { useState } from "react";
 
 
 
 
 function Header(props){
+
+	const[mobile, setmobile] = useState(false);
+	function getScreenSize() {
+		return (window.screen.width)
+	}
+	
+	if(getScreenSize()<500)	 {
+		setmobile(true);
+	}else{
+		setmobile(false);
+	}
 
 	const customStyle = {
 		background: "",

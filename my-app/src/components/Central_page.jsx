@@ -1,7 +1,21 @@
 import React from "react";
+import { useState, useEffect } from "react";
+
 
 
 function Central(){
+	const[mobile, setMobile] = useState(false);
+	
+	useEffect(() => {
+		function getScreenSize() {
+		  return window.screen.width;
+		}
+	 
+		if (getScreenSize() < 500) {
+		  setMobile(true);
+		}
+	   }, []); 
+	   
 	const Central_page = {
 		display: "grid",
 		gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
@@ -41,7 +55,7 @@ function Central(){
 	}
 	const customIntro = {
 		color: "#fff",
-		fontSize: "30px",
+		fontSize: mobile?"15px":"30px",
 		padding: "10%",
 		position: "absolute",
 
@@ -107,6 +121,18 @@ function Central(){
 	}
 	const imageStyle = {
 		flex: "1"
+	}
+	const phone = {
+		Central_page: {
+
+		},
+		landing: {
+
+		},
+		ab:{
+
+		},
+		customIntro
 	}
 	
 	
