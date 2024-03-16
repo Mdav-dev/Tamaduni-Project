@@ -32,8 +32,8 @@ function Central(){
 	}	
 	const aa = {
 		position: "relative",
-		width: "100%",
-		paddingBottom: "45%",
+		width:"100%",
+		paddingBottom:mobile?"35%" :"45%",
 		overflow: "hidden",
 	}
 	const ab = {
@@ -41,7 +41,7 @@ function Central(){
 		top: "0",
 		left: "0",
 		width: "100%",
-		height: "100%",
+		height:mobile?"70%":"100%",
 		objectFit: "cover",
 	}
 
@@ -85,6 +85,7 @@ function Central(){
 
 	const customStyle4 = {
 		display: "flex",
+		flexDirection: mobile?"column":"",
 		gap: "50px",
 		padding: "20px",
 		gridColumn: "1/7",
@@ -149,9 +150,10 @@ function Central(){
 
 		<div style = {customStyle4}>
 			<div style = {customStyle5}>
+			{mobile?<img style={imageStyle} src="Images/card_images/79.jpg" />:""}
 				<h1>Afro Celebration</h1>
-				<p>"Afro Celebration" likely refers to a cultural event or festival celebrating African heritage, culture, music, dance, and traditions. It could take various forms, such as a community gathering, concert, dance performance, or festival organized to commemorate and showcase aspects of African culture.
-
+				<p>"Afro Celebration" likely refers to a cultural event or festival celebrating African heritage, culture,
+					 music, dance, and traditions. It could take various forms, such as a community gathering, concert, dance performance, or festival organized to commemorate and showcase aspects of African culture.
 					These celebrations often include a vibrant display of traditional African attire, music genres 
 					like Afrobeat, Afro-jazz, or traditional African rhythms, dance performances such as traditional
 					 dances or contemporary African dance styles, art exhibitions, cultural workshops, and cuisine 
@@ -161,8 +163,10 @@ function Central(){
 					descent and others interested in African culture to come together, celebrate, and appreciate 
 					the richness and diversity of African heritage.</p>
 					<h3><a style={{textDecoration: "none", color:"purple" }} href="/afro_celebration">Explore More</a></h3>
-			</div> 			
-			<img style={imageStyle} src="Images/card_images/79.jpg" />					
+					{mobile?"":<img style={imageStyle} src="Images/card_images/79.jpg" />}
+			</div> 
+						
+								
 		</div>
 
 		 <div style = {customStyle4s}>		 

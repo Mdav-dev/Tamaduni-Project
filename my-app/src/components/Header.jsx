@@ -3,23 +3,35 @@ import ImageHome from "./Image_home";
 import {  Heading, Button } from 'rebass'
 import CButton from "./minor_components/CButton";
 import {FaBars, FaTimes} from "react-icons/fa"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 
 
 function Header(props){
 
-	const[mobile, setmobile] = useState(false);
-	function getScreenSize() {
-		return (window.screen.width)
-	}
+	// const[mobile, setmobile] = useState(false);
+	// function getScreenSize() {
+	// 	return (window.screen.width)
+	// }
 	
-	if(getScreenSize()<500)	 {
-		setmobile(true);
-	}else{
-		setmobile(false);
-	}
+	// if(getScreenSize()<500)	 {
+	// 	setmobile(true);
+	// }else{
+	// 	setmobile(false);
+	// }
+	const[mobile, setMobile] = useState(false);
+	
+	useEffect(() => {
+		function getScreenSize() {
+		  return window.screen.width;
+		}
+	 
+		if (getScreenSize() < 500) {
+		  setMobile(true);
+		}
+	   }, []); 
+	   
 
 	const customStyle = {
 		background: "",
@@ -34,18 +46,29 @@ function Header(props){
 		background: "",
 		display:"flex",
 		flexDirection: "column",
-		width: "200px",
+		width:mobile? "150px": "200px",
 		justifyContent: "center",
 		alignItems: "center"
 	}
 	const siteTitleNameStyling = {
-		fontFamily: "'Tangerine', cursive",
-		fontSize: "40px",
+		fontFamily: "cursive",
+		fontSize: mobile?"10px":"30px",
 		fontWeight: "bold",
 		background: "linear-gradient(to right, #642b73, #c6426e)",
 		WebkitBackgroundClip: "text",
 		color: "transparent",
 		dispay: "inline-block"
+	}
+	const header_file = {
+		paddingBottom:mobile?"10px":"",
+	}
+	const header = {
+		width: "100%"
+
+	}
+	const header_btns = {
+		width:mobile?"150px":"",
+
 	}
 	function handleClick(){
 		props.buttonClick();
@@ -60,8 +83,8 @@ function Header(props){
 
 	
 	return(
-		<div className="header_file">
-			<div style={{}} className="header">
+		<div className="header_file" style={header_file}>
+			<div style={header} className="header">
 				<div style={custom}>
 					<ImageHome 
 					class="logo"
@@ -74,8 +97,8 @@ function Header(props){
 					{/* <span onClick={handleClick}
 					class="material-icons-outlined menu_bar">Menu</span> */}
 				</div>
-				<div style={siteTitleNameStyling}><Heading className="header_title">{props.title}</Heading></div>
-				<div className="header_btns">
+				<div style={siteTitleNameStyling}>{props.title}</div>
+				<div style={header_btns} className="header_btns">
 					<CButton link="/login" name="Login" />
 					<CButton link="/sign_up" name="Sign Up" />
 				</div>
