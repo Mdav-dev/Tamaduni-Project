@@ -33,7 +33,7 @@ function Central(){
 	const aa = {
 		position: "relative",
 		width:"100%",
-		paddingBottom:mobile?"35%" :"45%",
+		paddingBottom:mobile?"45%" :"45%",
 		overflow: "hidden",
 	}
 	const ab = {
@@ -41,7 +41,7 @@ function Central(){
 		top: "0",
 		left: "0",
 		width: "100%",
-		height:mobile?"70%":"100%",
+		height:mobile?"100%":"100%",
 		objectFit: "cover",
 	}
 
@@ -86,7 +86,7 @@ function Central(){
 	const customStyle4 = {
 		display: "flex",
 		flexDirection: mobile?"column":"",
-		gap: "50px",
+		gap:mobile?"30px":"50px",
 		padding: "20px",
 		gridColumn: "1/7",
 		gridRow: "3/7",
@@ -102,7 +102,8 @@ function Central(){
 		gridColumn: "1/7",
 		gridRow: "7/11",
 		display: "flex",
-		gap: "50px",
+		flexDirection: mobile?"column":"",
+		gap:mobile?"30px":"50px",
 		padding: "20px",
 		background: "grey",
 		color: "#fff",
@@ -118,22 +119,26 @@ function Central(){
 		justifyContent: "center",
 		alignItems: "center",
 		flex: "1",
-		padding: "50px"
+		padding:mobile?"10px":"50px",
+		overflow: "hidden",
+		textOverflow: "ellipsis",
 	}
 	const imageStyle = {
 		flex: "1"
 	}
 	const phone = {
-		Central_page: {
+		Central_page1: {
 
 		},
-		landing: {
+		landing1: {
 
 		},
-		ab:{
+		ab1:{
 
 		},
-		customIntro
+		customIntro:{
+
+		}
 	}
 	
 	
@@ -149,8 +154,8 @@ function Central(){
 		</div>
 
 		<div style = {customStyle4}>
-			<div style = {customStyle5}>
 			{mobile?<img style={imageStyle} src="Images/card_images/79.jpg" />:""}
+			<div style = {customStyle5}>			
 				<h1>Afro Celebration</h1>
 				<p>"Afro Celebration" likely refers to a cultural event or festival celebrating African heritage, culture,
 					 music, dance, and traditions. It could take various forms, such as a community gathering, concert, dance performance, or festival organized to commemorate and showcase aspects of African culture.
@@ -163,8 +168,9 @@ function Central(){
 					descent and others interested in African culture to come together, celebrate, and appreciate 
 					the richness and diversity of African heritage.</p>
 					<h3><a style={{textDecoration: "none", color:"purple" }} href="/afro_celebration">Explore More</a></h3>
-					{mobile?"":<img style={imageStyle} src="Images/card_images/79.jpg" />}
+					
 			</div> 
+			{mobile?"":<img style={imageStyle} src="Images/card_images/79.jpg" />}
 						
 								
 		</div>

@@ -12,9 +12,21 @@ import Stats from "./Stats";
 import Flag_card_container from "../AfroCelebration/flag_card_container";
 import Particulars_Card from "./Particulars_Card";
 import Sidebar from "../sidebar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Cultural_mapping(props){
+	const[mobile, setMobile] = useState(false);
+	
+	useEffect(() => {
+		function getScreenSize() {
+		  return window.screen.width;
+		}
+	 
+		if (getScreenSize() < 500) {
+		  setMobile(true);
+		}
+	   }, []); 
+
 	const container = {
 		display: "flex",
 		flexDirection: "column"
@@ -35,8 +47,9 @@ function Cultural_mapping(props){
 	
 	const sub_container = {
 		display: "flex",
+		flexDirection:mobile?"column":"" ,
 		justifyContent: "space-betwwen",
-		height: "100vh"
+		height:mobile?"":"100vh",
 	}
 	const synopsis_container = {
 		flex: "1",
@@ -86,16 +99,26 @@ function Cultural_mapping(props){
 			justifyContent: "center",
 			alignItems: "center",
 			height: "100%",
+			marginLeft:mobile?"35px":"",
 		},
 		b:{
-			width: "30px",
-			height: "30px"
+			width: "25px",
+			height: "25px"
 		}
 	}
 	const title = {
 		"fontFamily":"cursive",
 		"fontWeight":"600",
-		"fontStyle":"normal"
+		"fontStyle":"normal",
+		fontSize:mobile?"17px":"",
+		marginLeft:mobile?"0":"",
+		paddingLeft:mobile?"0":"",
+		
+		
+	}
+	const logo = {
+		width:mobile?"90px":"",
+		height:mobile?"90px":"",
 	}
 
 	const [sidebar, setSidebar] =useState(false);
@@ -114,6 +137,7 @@ function Cultural_mapping(props){
 					<div>
 						<a href="/#"><ImageHome 
 							class="logo"
+							style={logo}
 							ImgSrc="/Images/tamaduni_logo.png" 
 							alt="Logo Image"						
 							/></a>
@@ -138,7 +162,7 @@ function Cultural_mapping(props){
 							style={{
 								border: "2px solid #000", 
 								borderRadius: "7%", 
-								height: "40px",
+								height:mobile?"30px":"40px",
 								width: "200px",
 								margin: "5px",
 
@@ -148,8 +172,8 @@ function Cultural_mapping(props){
 						/>					
 						<div 
 							style={{
-								height: "40px",
-								width: "40px", 
+								height:mobile?"30px":"40px",
+								width:"40px", 
 								border: "2px solid #000",
 								borderRadius: "10%",
 								margin: "5px",
@@ -157,7 +181,7 @@ function Cultural_mapping(props){
 								justifyContent: "center",
 								alignItems: "center",
 								}}>
-							<MdSearch style={{width: "30px", height: "30px"}} />	
+							<MdSearch style={{width:mobile?"25px":"30px", height:mobile?"25px":"30px"}} />	
 						</div>								
 					</div>
 					<div style={location}>
@@ -170,14 +194,12 @@ function Cultural_mapping(props){
 
 				</div>
 				<div style={display_content}>
-
 					
-				{check?(<Map />):(
+					{check?(<Map />):(
 					<Particulars 
 						heading="Museum"
 						category="Heritage places"
-						card= {Particulars_Card} 				
-
+						card= {Particulars_Card} 
 						/>)}				 
 				</div>
 			</div>

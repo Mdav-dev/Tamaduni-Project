@@ -46,13 +46,13 @@ function Header(props){
 		background: "",
 		display:"flex",
 		flexDirection: "column",
-		width:mobile? "150px": "200px",
+		width:mobile? "120px": "200px",
 		justifyContent: "center",
 		alignItems: "center"
 	}
 	const siteTitleNameStyling = {
 		fontFamily: "cursive",
-		fontSize: mobile?"10px":"30px",
+		fontSize: mobile?"15px":"30px",
 		fontWeight: "bold",
 		background: "linear-gradient(to right, #642b73, #c6426e)",
 		WebkitBackgroundClip: "text",
@@ -67,7 +67,7 @@ function Header(props){
 
 	}
 	const header_btns = {
-		width:mobile?"150px":"",
+		width:mobile?"100px":"",
 
 	}
 	function handleClick(){

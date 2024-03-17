@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Flag_card from '../AfroCelebration/flag_card'
 
 function Scrollables() {
@@ -7,10 +7,22 @@ function Scrollables() {
 
 	}
 
+	const[mobile, setMobile] = useState(false);
+	
+	useEffect(() => {
+		function getScreenSize() {
+		  return window.screen.width;
+		}
+	 
+		if (getScreenSize() < 500) {
+		  setMobile(true);
+		}
+	   }, []); 
+
 	const sub_container = {
 			position: "relative",
 			width: "100%",
-			paddingBottom: "50%",
+			paddingBottom:mobile?"160%":"50%",
 			overflow: "hidden",
 			// display: "grid",
 			// gridTemplateColumns: "1fr 1fr 1fr 1fr",

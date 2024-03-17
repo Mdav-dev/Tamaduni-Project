@@ -1,9 +1,21 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import ImageHome from "./Image_home";
 import List from "./List_comp";
 import P from "./minor_components/pa";
 
 function Footer(){
+
+	const[mobile, setMobile] = useState(false);
+	
+	useEffect(() => {
+		function getScreenSize() {
+		  return window.screen.width;
+		}
+	 
+		if (getScreenSize() < 500) {
+		  setMobile(true);
+		}
+	   }, []); 
 
 	const date = new Date();
 	const current_year = date.getFullYear()
@@ -17,9 +29,12 @@ function Footer(){
 		dispay: "inline-block",
 		
 	}
+	const footer = {
+		flexDirection:mobile?"column":"",
+	}
 
 	return(
-		<div className="footer">		
+		<div className="footer" style={footer}>		
 			<div className="footer_sect">
 				<ImageHome 
 				class="logo"

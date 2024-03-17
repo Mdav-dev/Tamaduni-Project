@@ -1,10 +1,22 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import Header from "./Header";
 import{AiFillGoogleSquare, AiFillFacebook} from "react-icons/ai"
 import { FcGoogle } from "react-icons/fc";
 
 
 function Sign_up(){
+	const[mobile, setMobile] = useState(false);
+	
+	useEffect(() => {
+		function getScreenSize() {
+		  return window.screen.width;
+		}
+	 
+		if (getScreenSize() < 500) {
+		  setMobile(true);
+		}
+	   }, []); 
+
 	const [formData, setFormData] = useState({
 		username: '',
 		email: '',
@@ -70,11 +82,11 @@ function Sign_up(){
 			display: "grid",
 			gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
 			gridTemplateRows: "1fr 1fr 1fr 1fr",
-			height: "100vh"
+			height:mobile?"":"100vh"
 	      }
 	      const sub_container = {
-			gridColumn: "4/7",
-			gridRow: "1/6",
+			gridColumn:mobile?"1/7":"4/7",
+			gridRow:mobile?"2/5":"1/6",
 			display: "flex",
 			flexDirection: "column",
 			justifyContent: "center",
@@ -90,8 +102,8 @@ function Sign_up(){
 		}
 		 const image_container = {
 			...aa,
-			gridColumn: "1/4",
-			gridRow: "1/6",			
+			gridColumn:mobile?"1/7":"1/4",
+			gridRow:mobile?"1/2":"1/6",			
 		 }
 		 const ab = {
 			position: "absolute",
